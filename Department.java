@@ -1,11 +1,29 @@
+import java.util.HashMap;
+
 public class Department {
     private String depCode;
     private String depName;
-    private double depTotalSalary;
+    private Double depTotalSalary = 0.00;
+    private HashMap<String, Employee> employeeMap;
 
-    public Department(String depCode, String depName) {
+    public Department() {
+        employeeMap = new HashMap<>();
+    }
+
+    public void setDepCode(String depCode) {
         this.depCode = depCode;
+    }
+
+    public void setDepName(String depName) {
         this.depName = depName;
+    }
+
+    public void setDepTotalSalary(Double depTotalSalary) {
+        this.depTotalSalary = depTotalSalary;
+    }
+
+    public void setEmployeeMap(HashMap<String, Employee> employeeMap) {
+        this.employeeMap = employeeMap;
     }
 
     public String getDepCode() {
@@ -16,11 +34,11 @@ public class Department {
         return depName;
     }
 
-    public double getDepTotalSalary() {
+    public Double getDepTotalSalary() {
         return depTotalSalary;
     }
 
-    public void setDepTotalSalary(double depTotalSalary) {
-        this.depTotalSalary = depTotalSalary;
+    public HashMap<String, Employee> getEmployeeMap() {
+        return employeeMap;
     }
 }
